@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .profile-photo, .mutual-profile, .profile-photo2,.mutual-profile2,.cat-profile-photo{
+        width: 50px;
+        height: 50px;
+        display: inline-block;
+        margin-right: 30px;
+        border-radius: 50px;
+    }
+    .happening{
+        display: inline-block;
+        width: 300px;
+        height: 30px;
+        vertical-align: 20px;
+        color: rgb(154, 159, 163);
+    
+    }
+    button{
+        background-color: rgb(87, 149, 255);
+        border: none;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 5px;
+        vertical-align: 20px;
+        color: white;
+        cursor: pointer;
+    }
+    .container{
+        border: solid;
+        border-width: 1px;
+        border-color: rgb(167, 167, 167);
+        border-radius: 50px;
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+        box-shadow: 5px 5px 5px rgba(0,0,0,0.15);
+        cursor: pointer;
+        margin-bottom: 20px;
+    }
+    .profile-photo1{
+        width: 200px;
+        object-fit: cover;
+    }
+    p{
+        font-family: arial;
+        margin: 0;
+    }
+    .profile-name,.profile-name2{
+        font-weight: bold;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        margin-left: 15px;
+    }
+    .friend1{
+        width: 200px;
+        height: 350px;
+        border: solid;
+        border-width: 1px;
+        border-color: aliceblue;
+        box-shadow: 5px 5px 15px rgba(0,0,0,0.15);
+        display: inline-block;
+    }
+    .add-btn{
+        width: 90px;
+        margin-left: 15px;
+        margin-right: 5px;
+    }
+    
+    .mutual,.mutual2{
+        display: inline-block;
+        margin-left: 0;
+        font-size: 12px;
+        vertical-align: 3px;
+        color: rgb(108, 111, 113);
+        margin-bottom: 5px;
+    }
+    .mutual-profile,.mutual-profile2{
+        width: 15px;
+        height: 15px;
+        display: inline-block;
+        margin-left: 15px;
+        margin-right: 0;
+
+    }
+    .profile-photo2{
+        display: inline-block;
+        width: 70px;
+        height: 70px;
+        margin-left: 15px;
+        margin-bottom: 10px;
+        margin-right: 0
+    }
+    .name-and-mutual{
+        display: inline-block;
+        margin-top: 5px;
+        
+    }
+    .button{
+        display: block;
+        margin-left: 15px;
+    }
+    .name-button{
+        display: inline-block;
+    }
+    .suggest-friend{
+        width: 300px;
+        box-shadow: 5px 5px 15px rgba(0,0,0,0.15);
+    }
+    .home-notification{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+    }
+    .noti14-btn{
+        background-color: rgb(52, 126, 255);
+        border-radius: 12px;
+    }
+    .noti-container{
+        width: 300px;
+        height: 110px;
+        border: solid;
+        border-color: rgb(186, 186, 186);
+        border-radius: 10px;
+        border-width: 0.5px;
+        padding: 5px 10px;
+        box-shadow: 5px 5px 15px rgba(0,0,0,0.15);
+    }
+    .navbar{
+        display: flex;
+        height: 50px;
+        width: 500px;
+        background-color: rgb(106, 54, 155);
+    }
+    .nav-home{
+        width: 70px;
+        display: flex;
+        align-items: center;
+        color: white;
+        font-size: 13px;
+        font-weight: bold;
+        margin-left: 15px;
+    }
+    .nav-input{
+        width: 300px;
+        display: flex;
+        align-items: center;
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+    .nav-search-box{
+        display: flex;
+        flex: 1;
+        border-radius: 15px;
+        border: none;
+        padding-left: 10px;
+        padding-top: 7px;
+        padding-bottom: 7px;
+    }
+    .nav-down{
+        width: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        margin-right: 10px;
+    }
+    .nav-down-btn{
+        background-color: rgb(106, 54, 155);
+        border: solid;
+        border-width: 1px;
+        border-color: rgb(198, 198, 198);
+        color: rgb(198, 198, 198);
+        cursor: pointer;
+    }
+    .follow-cart{
+        display: flex;
+        width: 500px;
+        display: grid;
+        grid-template-columns: 100px 300px 100px;
+    }
+    .follow-photo{
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+    }
+    .follow-cat-info{
+        font-size: 13px;
+        line-height: 17px;
+    }
+    .follow-btn{
+        display: flex;
+        align-items: center;
+        justify-content: end;
+    }
+    .cat-name{
+        font-weight: bold;
+    }
+    .cat-type,.cat-popular{
+        color: gray;
+    }
+    .cat-profile-photo{
+        margin-right: 0;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <img class="profile-photo" src="../photo/MaMa/1aac0f869ac9d7e48931b0640af47ecb.jpg" alt="profile-photo">
+    <p class="happening">What is happening?</p>
+    <button class="post-btn">Post</button>
+</div>
+
+<div class="friend1">
+    <img class="profile-photo1" src="../photo/MaMa/1aac0f869ac9d7e48931b0640af47ecb.jpg" alt="profile-photo">
+    <p class="profile-name">Tu Tu</p>
+    <div>
+        <img class="mutual-profile" src="../photo/MaMa/2026-08-06 23.18.33.jpg" alt="profile-photo">
+        <p class="mutual">3 mutual friends</p>
+    </div>
+    <button class="add-btn">Add friend</button>
+    <button class="remove-btn">Remove</button>
+</div>
+
+<div class="friend1">
+    <img class="profile-photo1" src="../photo/MaMa/1aac0f869ac9d7e48931b0640af47ecb.jpg" alt="profile-photo">
+    <p class="profile-name">Tu Tu</p>
+    <div>
+        <img class="mutual-profile" src="../photo/MaMa/2026-08-06 23.18.33.jpg" alt="profile-photo">
+        <p class="mutual">3 mutual friends</p>
+    </div>
+    <button class="add-btn">Add friend</button>
+    <button class="remove-btn">Remove</button>
+</div>
+
+<div class="friend1">
+    <img class="profile-photo1" src="../photo/MaMa/1aac0f869ac9d7e48931b0640af47ecb.jpg" alt="profile-photo">
+    <p class="profile-name">Tu Tu</p>
+    <div>
+        <img class="mutual-profile" src="../photo/MaMa/2026-08-06 23.18.33.jpg" alt="profile-photo">
+        <p class="mutual">3 mutual friends</p>
+    </div>
+    <button class="add-btn">Add friend</button>
+    <button class="remove-btn">Remove</button>
+</div>
+
+<div class="friend1">
+    <img class="profile-photo1" src="../photo/MaMa/1aac0f869ac9d7e48931b0640af47ecb.jpg" alt="profile-photo">
+    <p class="profile-name">Tu Tu</p>
+    <div>
+        <img class="mutual-profile" src="../photo/MaMa/2026-08-06 23.18.33.jpg" alt="profile-photo">
+        <p class="mutual">3 mutual friends</p>
+    </div>
+    <button class="add-btn">Add friend</button>
+    <button class="remove-btn">Remove</button>
+</div>
+
+<div class="friend1">
+    <img class="profile-photo1" src="../photo/MaMa/1aac0f869ac9d7e48931b0640af47ecb.jpg" alt="profile-photo">
+    <p class="profile-name">Tu Tu</p>
+    <div>
+        <img class="mutual-profile" src="../photo/MaMa/2026-08-06 23.18.33.jpg" alt="profile-photo">
+        <p class="mutual">3 mutual friends</p>
+    </div>
+    <button class="add-btn">Add friend</button>
+    <button class="remove-btn">Remove</button>
+</div>
+
+<div class="friend1">
+    <img class="profile-photo1" src="../photo/MaMa/1aac0f869ac9d7e48931b0640af47ecb.jpg" alt="profile-photo">
+    <p class="profile-name">Tu Tu</p>
+    <div>
+        <img class="mutual-profile" src="../photo/MaMa/2026-08-06 23.18.33.jpg" alt="profile-photo">
+        <p class="mutual">3 mutual friends</p>
+    </div>
+    <button class="add-btn">Add friend</button>
+    <button class="remove-btn">Remove</button>
+</div>
+
+<div class="friend1">
+    <img class="profile-photo1" src="../photo/MaMa/1aac0f869ac9d7e48931b0640af47ecb.jpg" alt="profile-photo">
+    <p class="profile-name">Tu Tu</p>
+    <div>
+        <img class="mutual-profile" src="../photo/MaMa/2026-08-06 23.18.33.jpg" alt="profile-photo">
+        <p class="mutual">3 mutual friends</p>
+    </div>
+    <button class="add-btn">Add friend</button>
+    <button class="remove-btn">Remove</button>
+</div>
+
+<p class="people-you-may-know">People you may know</p>
+<div class="suggest-friend">
+    <img class="profile-photo2" src="../photo/MaMa/1aac0f869ac9d7e48931b0640af47ecb.jpg" alt="profile-photo">
+    <div class="name-button">
+        <div class="name-and-mutual">
+            <p class="profile-name2">Tu Tu</p>
+            <div>
+                <img class="mutual-profile2" src="../photo/MaMa/1aac0f869ac9d7e48931b0640af47ecb.jpg" alt="">
+                <p class="mutual2" >mutual friends</p>
+            </div>
+        </div>
+        <div class="button">
+            <button class="add-btn2">Add friend</button>
+            <button class="remove-btn2">Remove</button>
+        </div>
+    </div>
+</div>
+
+<div class="noti-container">
+    <div class="home-notification">
+        <p class="home">Home</p>
+        <button class="noti14-btn">14</button>
+    </div>
+    <div class="home-notification">
+        <p class="home">Notifications</p>
+        <button class="noti14-btn">3</button>
+    </div>
+    <div class="home-notification">
+        <p class="home">Message</p>
+        <button class="noti14-btn">5</button>
+    </div>
+</div>
+
+<div class="navbar">
+    <div class="nav-home">
+        <p>Home</p>
+    </div>
+    <div class="nav-input">
+        <input class="nav-search-box" type="text" placeholder="Search">
+    </div>
+    <div class="nav-down">
+        <button class="nav-down-btn">Download</button>
+    </div>
+</div>
+
+<div class="follow-cart">
+    <div class="follow-photo">
+        <img class="cat-profile-photo" src="../photo/MaMa/1aac0f869ac9d7e48931b0640af47ecb.jpg" alt="profile-photo">
+    </div>
+    <div class="follow-cat-info">
+        <p class="cat-name">Oliver</p>
+        <p class="cat-type">Smart Cat</p>
+        <p class="cat-popular">Popular</p>
+    </div>
+    <div class="follow-btn">
+        <button class="cat-follow-btn">Follow</button>
+    </div>
+</div>
+
+<div class="follow-cart">
+    <div class="follow-photo">
+        <img class="cat-profile-photo" src="../photo/MaMa/1aac0f869ac9d7e48931b0640af47ecb.jpg" alt="profile-photo">
+    </div>
+    <div class="follow-cat-info">
+        <p class="cat-name">Oliver</p>
+        <p class="cat-type">Smart Cat</p>
+        <p class="cat-popular">Popular</p>
+    </div>
+    <div class="follow-btn">
+        <button class="cat-follow-btn">Follow</button>
+    </div>
+</div>
+
+<div class="follow-cart">
+    <div class="follow-photo">
+        <img class="cat-profile-photo" src="../photo/MaMa/1aac0f869ac9d7e48931b0640af47ecb.jpg" alt="profile-photo">
+    </div>
+    <div class="follow-cat-info">
+        <p class="cat-name">Oliver</p>
+        <p class="cat-type">Smart Cat</p>
+        <p class="cat-popular">Popular</p>
+    </div>
+    <div class="follow-btn">
+        <button class="cat-follow-btn">Follow</button>
+    </div>
+</div>
+</body>
+</html>
